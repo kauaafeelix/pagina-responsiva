@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2%;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 2%;
+    background-color: #ffee00;
+    color: #006400;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .menu {
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .menu-items {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+  }
+  
+  .menu-items a {
+    text-decoration: none;
+    color: #006400;
+  }
+  
+  .destaque {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2%;
+    padding: 2%;
+  }
+  
+  .destaque img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .servicos {
+    display: grid;
+    gap: 2%;
+    padding: 2%;
+  }
+  
+  .card {
+    padding: 2%;
+    background-color: #006400;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+
+  .card h2, p {
+    color: #ffee00;
+  }
+  
+  .texto h1{
+    margin: 0.5rem 0;
+    color: #006400;  
+    font-weight: 600;  
+    background-color: #ffee00;
+  }
+
+  .texto p{
+    color: #006400;
+  }
+
+  .footer {
+    text-align: center;
+    padding: 1%;
+    background-color: #006400;
+    color: #ffee00;
+  }
+  
+  @media (max-width: 768px) {
+    .menu-items {
+      display: none;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    .destaque {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  
+    .servicos {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .destaque {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .servicos {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .menu-toggle {
+      display: none;
+    }
+  
+    .servicos {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
